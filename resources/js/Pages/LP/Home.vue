@@ -4,12 +4,15 @@
             <Cta />
             <About />
             <Services />
+            <Testimonials />
+            <Contact />
         </div>
+        <!--Scroll TOP button-->
         <TransitionRoot :show="goUpButton" enter="transition-all duration-75" enter-from="opacity-0 translate-y-full"
-            enter-to="opacity-100 translate-y-0" leave="transition-all duration-150" leave-from="opacity-100 translate-y-0" leave-to="opacity-0 translate-y-full"
+            enter-to="opacity-100 translate-y-0" leave="transition-all duration-150"
+            leave-from="opacity-100 translate-y-0" leave-to="opacity-0 translate-y-full"
             class="fixed bottom-5 right-5 z-40">
-            <button type="button" @click="goBackToTop"
-                class="bg-secondaryColor p-2 rounded-full text-white border-4 border-hoverColor">
+            <button type="button" @click="goBackToTop" class="bg-secondaryColor p-2 rounded-full text-white opacity-50">
                 <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
                     stroke="currentColor" class="size-8">
                     <path stroke-linecap="round" stroke-linejoin="round" d="m4.5 15.75 7.5-7.5 7.5 7.5" />
@@ -26,10 +29,17 @@ import About from './Partials/About.vue';
 import Services from './Partials/Services.vue';
 import windowScrollPosition from '@/window-scroll-position';
 import { TransitionRoot } from '@headlessui/vue';
+import Testimonials from './Partials/Testimonials.vue';
+import Contact from './Partials/Contact.vue';
 
 export default {
     components: {
-        AppLayout, Cta, About, Services, TransitionRoot
+        AppLayout, Cta, About, Services, TransitionRoot,
+        Testimonials, Contact
+    },
+
+    props: {
+        recaptcha_site_key: String,
     },
 
     methods: {

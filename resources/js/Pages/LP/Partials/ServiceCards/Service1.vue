@@ -106,16 +106,14 @@ const { elementX, elementY, isOutside, elementHeight, elementWidth } = useMouseI
 const cardTransform = computed(() => {
     const MAX_ROTATION = 6;
 
-    const rX = (
-        MAX_ROTATION / 2 - (elementY.value / elementHeight.value) * MAX_ROTATION
-    ).toFixed(2); // miscare axa X
+    const normalizedX = (elementX.value / elementWidth.value) - 0.5;
+    const normalizedY = (elementY.value / elementHeight.value) - 0.5;
 
-    const rY = (
-        MAX_ROTATION / 2 - (elementX.value / elementWidth.value) * MAX_ROTATION - MAX_ROTATION / 2
-    ).toFixed(2); // miscare axa Y
+    const rX = (normalizedY * MAX_ROTATION).toFixed(2);
+    const rY = (normalizedX * MAX_ROTATION).toFixed(2);
 
     return isOutside.value ? '' : `perspective(${elementWidth.value}px) rotateX(${rX}deg) rotateY(${rY}deg)`;
-
 });
+
 
 </script>

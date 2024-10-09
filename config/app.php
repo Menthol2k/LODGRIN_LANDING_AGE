@@ -28,6 +28,8 @@ return [
 
     'env' => env('APP_ENV', 'production'),
 
+    'default_user' => env('DEFAULT_USER_PASSWORD', '1234567890'),
+
     /*
     |--------------------------------------------------------------------------
     | Application Debug Mode

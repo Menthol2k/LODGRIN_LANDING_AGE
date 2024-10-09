@@ -21,9 +21,13 @@
     },
     "dependencies": {
         "@headlessui/vue": "^1.7.23",
+        "@heroicons/vue": "^2.1.5",
         "@vueuse/core": "^11.1.0",
         "@vueuse/motion": "^2.2.5",
         "animate.css": "^4.1.1",
-        "framer-motion": "^11.11.5"
+        "framer-motion": "^11.11.5",
+        "jquery": "^3.7.1",
+        "lodash": "^4.17.21",
+        "vue-recaptcha": "^3.0.0-alpha.6"
     }
 }

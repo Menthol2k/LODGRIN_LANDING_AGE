@@ -16,11 +16,11 @@
                     modern, îți oferim exact ceea ce ai nevoie pentru a reuși.</p>
 
                 <div class="mt-10 flex items-center gap-x-6">
-                    <a href="#"
+                    <a href="#contact"
                         class="rounded-md bg-primaryColor transition-all px-3.5 py-2.5 text-sm font-semibold text-white shadow-sm hover:bg-hoverColor focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primaryColor">
                         Contactează-ne
                     </a>
-                    <a href="#" class="text-sm font-semibold leading-6 text-gray-900">Vezi mai multe <span
+                    <a href="#about" class="text-sm font-semibold leading-6 text-gray-900">Vezi mai multe <span
                             aria-hidden="true">→</span></a>
                 </div>
 
@@ -82,7 +82,7 @@
                         </ul>
                     </div>
 
-                    <div class="flex flex-col items-start md:w-4/12 w-full relative md:mt-0 mt-10">
+                    <div class="flex flex-col items-start md:w-4/12 w-full relative md:mt-0 mt-10 md:pb-0 pb-10">
                         <p class="text-4xl text-primaryColor font-extrabold text-center w-full z-20">Dezvoltăm chiar
                             și
                         </p>
@@ -103,6 +103,15 @@
                 d="M0,256L120,261.3C240,267,480,277,720,277.3C960,277,1200,267,1320,261.3L1440,256L1440,320L1320,320C1200,320,960,320,720,320C480,320,240,320,120,320L0,320Z">
             </path>
         </svg>
+    </div>
+    <div>
+        <a href="#about" class="hidden md:block z-40 animate-bounce absolute left-[50%] right-[50%] bottom-10">
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                stroke="currentColor" class="size-8 text-gray-400 drop-shadow-xl">
+                <path stroke-linecap="round" stroke-linejoin="round"
+                    d="m4.5 5.25 7.5 7.5 7.5-7.5m-15 6 7.5 7.5 7.5-7.5" />
+            </svg>
+        </a>
     </div>
 </template>
 <script setup>
