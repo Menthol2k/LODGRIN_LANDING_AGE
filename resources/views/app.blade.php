@@ -16,12 +16,7 @@
     </script>
 
     <!-- Recaptcha-->
-    <script src="https://www.google.com/recaptcha/api.js" async defer></script>
-    <script>
-        function onSubmit(token) {
-            document.getElementById("demo-form").submit();
-        }
-    </script>
+    <script src="https://js.hcaptcha.com/1/api.js?hl=ro" async defer></script>
 
     <!-- Cookies -->
     <script data-cookieconsent="ignore">

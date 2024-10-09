@@ -94,7 +94,7 @@
                                 <div>
                                     <p v-if="errors.caen" class="text-red-500 text-sm font-medium mt-1">{{
                                         errors.caen
-                                    }}
+                                        }}
                                     </p>
                                 </div>
                             </Combobox>
@@ -140,7 +140,7 @@
                         <div class="col-span-2">
                             <p v-if="errors.terms_and_conditions" class="text-red-500 text-sm font-medium">{{
                                 errors.terms_and_conditions
-                            }}
+                                }}
                             </p>
                         </div>
                         <div class="col-span-2 flex justify-end">
@@ -160,7 +160,12 @@
                                     formularul</p>
                             </button>
                         </div>
+                        <HCaptcha @verify="onVerify" @expire="onExpire" />
                     </div>
+                    <p v-if="errors.captcha_token" class="text-red-500 text-sm font-medium">{{
+                        errors.captcha_token
+                    }}
+                    </p>
                 </form>
                 <div v-else class="flex justify-center items-center text-center">
                     <div>
@@ -190,12 +195,14 @@ import {
     ComboboxOption,
     ComboboxOptions,
 } from '@headlessui/vue'
+import HCaptcha from '@/Components/HCaptcha.vue';
 
 export default {
     components: {
         AppLayout, CheckIcon, ChevronUpDownIcon,
         Combobox, ComboboxButton, ComboboxInput,
-        ComboboxLabel, ComboboxOption, ComboboxOptions
+        ComboboxLabel, ComboboxOption, ComboboxOptions,
+        HCaptcha
     },
 
     props: {
@@ -212,6 +219,7 @@ export default {
                 caen: null,
                 message: null,
                 terms_and_conditions: false,
+                captcha_token: null,
             }),
             errors: [],
             params: {
@@ -238,7 +246,13 @@ export default {
                     });
                 this.loading = false;
             }, 1800);
-        }
+        },
+        onVerify(token) {
+            this.form.captcha_token = token;
+        },
+        onExpire() {
+            this.form.captcha_token = '';
+        },
     },
 
     computed: {

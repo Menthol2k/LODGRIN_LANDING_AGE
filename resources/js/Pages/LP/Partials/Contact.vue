@@ -71,7 +71,7 @@
                         <div class="md:col-span-1 col-span-2">
                             <label for="first-name" class="block text-sm font-semibold leading-6 text-gray-900">Nume &
                                 Prenume*</label>
-                            <div class="mt-2.5">
+                            <div class="mt-1">
                                 <input v-model="form.name" placeholder="Popescu Ion" type="text" name="first-name"
                                     id="first-name" autocomplete="given-name"
                                     class="block w-full rounded-md border-0 px-3.5 py-2 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-primaryColor sm:text-sm sm:leading-6">
@@ -84,7 +84,7 @@
                         <div class="md:col-span-1 col-span-2">
                             <label for="last-name" class="block text-sm font-semibold leading-6 text-gray-900">Companie
                                 / CUI</label>
-                            <div class="mt-2.5">
+                            <div class="mt-1">
                                 <input v-model="form.company" placeholder="Denumire companie SRL" type="text"
                                     name="last-name" id="last-name" autocomplete="family-name"
                                     class="block w-full rounded-md border-0 px-3.5 py-2 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-primaryColor sm:text-sm sm:leading-6">
@@ -98,7 +98,7 @@
                         <div class="col-span-2">
                             <label for="email"
                                 class="block text-sm font-semibold leading-6 text-gray-900">Email*</label>
-                            <div class="mt-2.5">
+                            <div class="mt-1">
                                 <input v-model="form.email" placeholder="popescu.ios@email.ro" name="email" id="email"
                                     autocomplete="email"
                                     class="block w-full rounded-md border-0 px-3.5 py-2 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-primaryColor sm:text-sm sm:leading-6">
@@ -111,7 +111,7 @@
                         <div class="col-span-2">
                             <label for="phone-number" class="block text-sm font-semibold leading-6 text-gray-900">Numar
                                 de telefon*</label>
-                            <div class="mt-2.5">
+                            <div class="mt-1">
                                 <input v-model="form.phone" placeholder="0712 345 678" type="tel" name="phone-number"
                                     id="phone-number" autocomplete="tel"
                                     class="block w-full rounded-md border-0 px-3.5 py-2 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-primaryColor sm:text-sm sm:leading-6">
@@ -124,7 +124,7 @@
                         <div class="col-span-2">
                             <label for="message"
                                 class="block text-sm font-semibold leading-6 text-gray-900">Mesaj*</label>
-                            <div class="mt-2.5">
+                            <div class="mt-1">
                                 <textarea v-model="form.message" placeholder="Mesajul dvs..." name="message"
                                     id="message" rows="4"
                                     class="block w-full rounded-md border-0 px-3.5 py-2 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-primaryColor sm:text-sm sm:leading-6"></textarea>
@@ -162,10 +162,11 @@
                         <div class="col-span-2">
                             <p v-if="errors.terms_and_conditions" class="text-red-500 text-sm font-medium">{{
                                 errors.terms_and_conditions
-                                }}
+                            }}
                             </p>
                         </div>
                     </div>
+
                     <div class="mt-8 flex justify-end">
                         <button type="submit" :disabled="loading"
                             :class="loading ? 'bg-gray-500 hover:bg-gray-600 cursor-no-drop' : 'bg-primaryColor hover:bg-hoverColor'"
@@ -183,6 +184,11 @@
                                 formularul</p>
                         </button>
                     </div>
+                    <HCaptcha @verify="onVerify" @expire="onExpire" />
+                    <p v-if="errors.captcha_token" class="text-red-500 text-sm font-medium">{{
+                        errors.captcha_token
+                        }}
+                    </p>
                 </div>
             </form>
             <div v-else class="flex justify-center items-center text-center">
@@ -196,8 +202,13 @@
 </template>
 <script>
 import catchErrors from '@/catchErrors.js';
+import HCaptcha from '@/Components/HCaptcha.vue';
 
 export default {
+
+    components: {
+        HCaptcha
+    },
 
     data() {
         return {
@@ -213,7 +224,6 @@ export default {
             errors: [],
             successfull_form: false,
             loading: false,
-
         }
     },
 
@@ -231,7 +241,18 @@ export default {
                     });
                 this.loading = false;
             }, 1800);
-        }
+        },
+        onVerify(token) {
+            this.form.captcha_token = token;
+        },
+        onExpire() {
+            this.form.captcha_token = '';
+        },
     },
 }
 </script>
+<style scoped>
+.h-captcha {
+    margin: 20px 0;
+}
+</style>
