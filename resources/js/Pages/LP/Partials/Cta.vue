@@ -86,7 +86,7 @@
                         <p class="text-4xl text-primaryColor font-extrabold text-center w-full z-20">Dezvoltăm chiar
                             și
                         </p>
-                        <h1 class="text-2xl text-secondaryColor font-bold min-h-[60px] text-center z-20">
+                        <h1 class="text-2xl text-secondaryColor font-bold min-h-[60px] text-center z-20 w-full">
                             {{ currentService }}
                         </h1>
                     </div>

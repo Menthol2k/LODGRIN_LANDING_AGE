@@ -20,6 +20,10 @@
         "vue": "^3.3.13"
     },
     "dependencies": {
-        "animate.css": "^4.1.1"
+        "@headlessui/vue": "^1.7.23",
+        "@vueuse/core": "^11.1.0",
+        "@vueuse/motion": "^2.2.5",
+        "animate.css": "^4.1.1",
+        "framer-motion": "^11.11.5"
     }
 }
