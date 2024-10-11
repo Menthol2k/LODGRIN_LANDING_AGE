@@ -162,11 +162,15 @@
                         <div class="col-span-2">
                             <p v-if="errors.terms_and_conditions" class="text-red-500 text-sm font-medium">{{
                                 errors.terms_and_conditions
-                            }}
+                                }}
                             </p>
                         </div>
                     </div>
-
+                    <HCaptcha @verify="onVerify" @expire="onExpire" />
+                    <p v-if="errors.captcha_token" class="text-red-500 text-sm font-medium">{{
+                        errors.captcha_token
+                    }}
+                    </p>
                     <div class="mt-8 flex justify-end">
                         <button type="submit" :disabled="loading"
                             :class="loading ? 'bg-gray-500 hover:bg-gray-600 cursor-no-drop' : 'bg-primaryColor hover:bg-hoverColor'"
@@ -184,14 +188,9 @@
                                 formularul</p>
                         </button>
                     </div>
-                    <HCaptcha @verify="onVerify" @expire="onExpire" />
-                    <p v-if="errors.captcha_token" class="text-red-500 text-sm font-medium">{{
-                        errors.captcha_token
-                        }}
-                    </p>
                 </div>
             </form>
-            <div v-else class="flex justify-center items-center text-center">
+            <div v-else class="flex justify-center items-center text-center pb-16">
                 <div>
                     <h1 class="text-3xl font-bold text-primaryColor">Formularul a fost trimis cu succes</h1>
                     <p class="text-lg font-semibold text-gray-900">Va multumim pentru mesaj!</p>

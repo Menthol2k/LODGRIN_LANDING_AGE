@@ -36,7 +36,7 @@ const toggleAccordion = () => {
 
         <Banner />
 
-        <div class="min-h-screen bg-gray-100 dark:bg-gray-900">
+        <div class="min-h-screen bg-white dark:bg-gray-900">
             <nav class="bg-white dark:bg-gray-800 border-b border-gray-100 dark:border-gray-700">
                 <!-- Primary Navigation Menu -->
                 <div class="max-w-8xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -105,19 +105,19 @@ const toggleAccordion = () => {
                     :class="{ 'block': showingNavigationDropdown, 'hidden': !showingNavigationDropdown }"
                     class="sm:hidden">
                     <div class="pt-2 pb-3 space-y-1">
-                        <ResponsiveNavLink :href="'#about'" :active="route().current('dashboard')">
+                        <ResponsiveNavLink :href="'/#about'" :active="route().current('dashboard')">
                             Despre noi
                         </ResponsiveNavLink>
-                        <ResponsiveNavLink :href="'#services'" :active="route().current('dashboard')">
+                        <ResponsiveNavLink :href="'/#services'" :active="route().current('dashboard')">
                             Serviciile noastre
                         </ResponsiveNavLink>
-                        <ResponsiveNavLink :href="'#testimonials'" :active="route().current('dashboard')">
+                        <ResponsiveNavLink :href="'/#testimonials'" :active="route().current('dashboard')">
                             Testimoniale
                         </ResponsiveNavLink>
-                        <ResponsiveNavLink :href="route('home')" :active="route().current('dashboard')">
+                        <ResponsiveNavLink :href="'/tariff'" :active="route().current('tariff')">
                             Tarife
                         </ResponsiveNavLink>
-                        <ResponsiveNavLink :href="'#contact'" :active="route().current('dashboard')">
+                        <ResponsiveNavLink :href="'/#contact'" :active="route().current('dashboard')">
                             Contact
                         </ResponsiveNavLink>
                     </div>
@@ -133,40 +133,34 @@ const toggleAccordion = () => {
 
 
     <footer class="bg-white rounded-lg shadow dark:bg-gray-900">
-        <div class="w-full mx-auto md:pt-8 max-w-8xl">
+        <div class="w-full mx-auto pt-8 max-w-8xl">
             <div class="sm:flex sm:items-center sm:justify-between">
-                <a href="/" class="flex items-center mb-4 sm:mb-0 space-x-3 rtl:space-x-reverse">
-                    <img src="/images/lodgrin_logo_white_background.png" class="h-8" alt="Flowbite Logo" />
+                <a href="/" class="flex justify-center items-center mb-4 sm:mb-0 space-x-3 rtl:space-x-reverse">
+                    <img src="/images/lodgrin_logo_white_background.png" class="h-6" alt="Flowbite Logo" />
                 </a>
                 <ul
-                    class="flex flex-wrap items-center mb-6 text-sm font-medium text-gray-500 sm:mb-0 dark:text-gray-400">
+                    class="flex justify-center flex-wrap items-center mb-6 text-sm font-medium text-gray-500 sm:mb-0 dark:text-gray-400">
                     <li>
-                        <a href="#about" class="hover:underline me-4 md:me-6">Drespre noi</a>
+                        <a href="/#about" class="hover:underline me-4 md:me-6">Drespre noi</a>
                     </li>
                     <li>
-                        <a href="#services" class="hover:underline me-4 md:me-6">Serviciile noastre</a>
+                        <a href="/#services" class="hover:underline me-4 md:me-6">Serviciile noastre</a>
                     </li>
                     <li>
-                        <a href="#testimonials" class="hover:underline me-4 md:me-6">Testimoniale</a>
+                        <a href="/#testimonials" class="hover:underline me-4 md:me-6">Testimoniale</a>
                     </li>
                     <li>
                         <a href="/tariff" class="hover:underline me-4 md:me-6">Tarife</a>
                     </li>
                     <li>
-                        <a href="#contact" class="hover:underline me-4 md:me-6">Contact</a>
-                    </li>
-                    <li>
-                        <a href="#" class="hover:underline me-4 md:me-6">T&C</a>
-                    </li>
-                    <li>
-                        <a href="#" class="hover:underline me-4 md:me-6">Politica de Confidențialitate</a>
+                        <a href="/#contact" class="hover:underline me-4 md:me-6">Contact</a>
                     </li>
                 </ul>
             </div>
         </div>
         <hr class="my-6 border-gray-200 sm:mx-auto dark:border-gray-700 lg:my-8" />
         <div class="pb-8">
-            <span class="block text-sm text-gray-500 sm:text-center dark:text-gray-400">© {{ new Date().getFullYear() }}
+            <span class="flex justify-center text-sm text-gray-500 sm:text-center dark:text-gray-400">© {{ new Date().getFullYear() }}
                 <a href="https://lodgrin.com/" class="hover:underline">LODGRIN S.R.L.</a>. Toate drepturile
                 rezervate.</span>
         </div>

@@ -37,9 +37,7 @@
                     <div class="caspart-bottom show">
                         <p class="mt-8 max-w-lg text-gray-800 font-bold text-xl">
 
-                            Iată ce spun câțiva dintre clienții noștri fideli despre experiența lor cu Smart
-                            General
-                            Cleaning
+                            Iată ce spun câțiva dintre clienții noștri fideli despre experiența lor cu Lodgrin
                         </p>
                     </div>
                 </div>

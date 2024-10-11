@@ -1,10 +1,12 @@
 <template>
     <AppLayout>
-        <div class="max-w-8xl mx-auto mt-20">
-            <h1 v-if="!successfull_form" class="text-6xl font-bold text-primaryColor">Cere o ofertă personalizată</h1>
-            <div class="mt-14 pb-32 flex items-center justify-between">
-                <form v-if="!successfull_form" @submit.prevent="sendOffer">
-                    <div class="grid grid-cols-1 gap-x-8 gap-y-6 sm:grid-cols-2 max-w-xl">
+        <div class="max-w-8xl mx-auto mt-10 px-4 sm:px-6 lg:px-8">
+            <h1 v-if="!successfull_form"
+                class="text-3xl sm:text-4xl lg:text-6xl font-bold text-primaryColor text-center sm:text-left">Cere o
+                ofertă personalizată</h1>
+            <div class="mt-10 sm:mt-14 pb-16 sm:pb-32 flex flex-col sm:flex-row sm:items-center sm:justify-between">
+                <form v-if="!successfull_form" @submit.prevent="sendOffer" class="w-full sm:max-w-xl">
+                    <div class="grid grid-cols-1 gap-x-8 gap-y-6 sm:grid-cols-2">
                         <div class="col-span-2">
                             <label for="name" class="block text-sm font-semibold leading-6 text-gray-900">Nume &
                                 Prenume*</label>
@@ -18,6 +20,7 @@
                                 </p>
                             </div>
                         </div>
+
                         <div class="col-span-2">
                             <label for="email"
                                 class="block text-sm font-semibold leading-6 text-gray-900">Email*</label>
@@ -31,6 +34,7 @@
                                 </p>
                             </div>
                         </div>
+
                         <div class="col-span-2">
                             <label for="phone"
                                 class="block text-sm font-semibold leading-6 text-gray-900">Telefon*</label>
@@ -44,9 +48,10 @@
                                 </p>
                             </div>
                         </div>
+
                         <div class="col-span-2">
-                            <label for="company" class="block text-sm font-semibold leading-6 text-gray-900">Companie
-                                / CUI*</label>
+                            <label for="company" class="block text-sm font-semibold leading-6 text-gray-900">Companie /
+                                CUI*</label>
                             <div class="mt-1">
                                 <input v-model="form.company" placeholder="Denumire companie SRL" type="text"
                                     name="company" id="company" autocomplete="company"
@@ -54,15 +59,14 @@
                             </div>
                             <div>
                                 <p v-if="errors.company" class="text-red-500 text-sm font-medium mt-1">{{ errors.company
-                                    }}
-                                </p>
+                                    }}</p>
                             </div>
                         </div>
+
                         <div class="col-span-2">
                             <Combobox as="div" v-model="form.caen" @update:modelValue="params.query = ''">
                                 <ComboboxLabel class="block text-sm font-medium leading-6 text-gray-900">Domeniu
-                                    activitate (CAEN)*
-                                </ComboboxLabel>
+                                    activitate (CAEN)*</ComboboxLabel>
                                 <div class="relative mt-1">
                                     <ComboboxInput placeholder="Scrie domeniul de activitate..."
                                         class="w-full rounded-md border-0 bg-white py-1.5 pl-3 pr-10 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 focus:ring-2 focus:ring-inset focus:ring-primaryColor sm:text-sm sm:leading-6"
@@ -79,9 +83,8 @@
                                             :value="person" as="template" v-slot="{ active, selected }">
                                             <li
                                                 :class="['relative cursor-default select-none py-2 pl-3 pr-9', active ? 'bg-primaryColor text-white' : 'text-gray-900']">
-                                                <span :class="['block truncate', selected && 'font-semibold']">
-                                                    {{ person.name }}
-                                                </span>
+                                                <span :class="['block truncate', selected && 'font-semibold']">{{
+                                                    person.name }}</span>
 
                                                 <span v-if="selected"
                                                     :class="['absolute inset-y-0 right-0 flex items-center pr-4', active ? 'text-white' : 'text-primaryColor']">
@@ -92,13 +95,12 @@
                                     </ComboboxOptions>
                                 </div>
                                 <div>
-                                    <p v-if="errors.caen" class="text-red-500 text-sm font-medium mt-1">{{
-                                        errors.caen
-                                        }}
-                                    </p>
+                                    <p v-if="errors.caen" class="text-red-500 text-sm font-medium mt-1">{{ errors.caen
+                                        }}</p>
                                 </div>
                             </Combobox>
                         </div>
+
                         <div class="col-span-2">
                             <label for="message"
                                 class="block text-sm font-semibold leading-6 text-gray-900">Mesaj*</label>
@@ -109,13 +111,13 @@
                             </div>
                             <div class="flex items-center mt-1"
                                 :class="errors.message ? 'justify-between' : 'justify-end'">
-                                <p v-if="errors.message" class="text-red-500 text-sm font-medium">{{ errors.message
-                                    }}
+                                <p v-if="errors.message" class="text-red-500 text-sm font-medium">{{ errors.message }}
                                 </p>
                                 <p class="text-gray-400 text-xs">{{ form.message ? form.message.length : 0 }} caractere.
                                 </p>
                             </div>
                         </div>
+
                         <div class="flex gap-x-4 sm:col-span-2">
                             <div class="flex h-6 items-center">
                                 <button type="button" @click="form.terms_and_conditions = !form.terms_and_conditions"
@@ -131,55 +133,27 @@
                             <label @click="form.terms_and_conditions = !form.terms_and_conditions"
                                 class="text-sm leading-6 text-gray-600" id="switch-1-label">
                                 Sunt de acord cu <a href="/terms-and-conditions" class="underline">termenii și
-                                    condițiile</a> de utilizare. Sunt
-                                de acord cu <a href="/politics" class="underline">politica
-                                    de
-                                    prelucrare a datelor</a>. Am peste 16 ani.
+                                    condițiile</a> de utilizare. Sunt de acord cu <a href="/politics"
+                                    class="underline">politica de prelucrare a datelor personale</a>.
                             </label>
                         </div>
-                        <div class="col-span-2">
-                            <p v-if="errors.terms_and_conditions" class="text-red-500 text-sm font-medium">{{
-                                errors.terms_and_conditions
-                                }}
-                            </p>
-                        </div>
-                        <div class="col-span-2 flex justify-end">
-                            <button type="submit" :disabled="loading"
-                                :class="loading ? 'bg-gray-500 hover:bg-gray-600 cursor-no-drop' : 'bg-primaryColor hover:bg-hoverColor'"
-                                class="rounded-md transition-all flex items-center justify-center space-x-3 px-3.5 py-2.5 text-center text-sm font-semibold text-white shadow-sm focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primaryColor">
-                                <svg v-if="loading" xmlns="http://www.w3.org/2000/svg" width="1em" height="1em"
-                                    viewBox="0 0 24 24">
-                                    <path fill="currentColor"
-                                        d="M10.72,19.9a8,8,0,0,1-6.5-9.79A7.77,7.77,0,0,1,10.4,4.16a8,8,0,0,1,9.49,6.52A1.54,1.54,0,0,0,21.38,12h.13a1.37,1.37,0,0,0,1.38-1.54,11,11,0,1,0-12.7,12.39A1.54,1.54,0,0,0,12,21.34h0A1.47,1.47,0,0,0,10.72,19.9Z">
-                                        <animateTransform attributeName="transform" dur="0.75s" repeatCount="indefinite"
-                                            type="rotate" values="0 12 12;360 12 12" />
-                                    </path>
-                                </svg>
-                                <p>
-                                    Trimite
-                                    formularul</p>
-                            </button>
-                        </div>
-                        <HCaptcha @verify="onVerify" @expire="onExpire" />
                     </div>
+                    <HCaptcha @verify="onVerify" @expire="onExpire" class="mt-10" />
                     <p v-if="errors.captcha_token" class="text-red-500 text-sm font-medium">{{
                         errors.captcha_token
                     }}
                     </p>
-                </form>
-                <div v-else class="flex justify-center items-center text-center">
-                    <div>
-                        <h1 class="text-3xl font-bold text-primaryColor">Formularul a fost trimis cu succes</h1>
-                        <p class="text-lg font-semibold text-gray-900">Va multumim pentru mesaj!</p>
+                    <div class="mt-8 flex justify-end">
+                        <button type="submit"
+                            class="inline-block rounded-md bg-primaryColor px-3.5 py-2.5 text-center text-sm font-semibold text-white shadow-sm hover:bg-indigo-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600">Trimite
+                            mesaj</button>
                     </div>
-                </div>
-                <div class="flex justify-center mt-20">
-                    <img width="480" src="/assets/calling.svg" class="relative" />
-                </div>
+                </form>
             </div>
         </div>
     </AppLayout>
 </template>
+
 <script>
 import AppLayout from '@/Layouts/AppLayout.vue';
 import pickBy from 'lodash/pickBy';
