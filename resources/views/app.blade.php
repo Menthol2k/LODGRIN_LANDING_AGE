@@ -99,6 +99,8 @@
     <meta property="og:image" content="https://lodgrin.com/images/lodgrin_logo_dark_background.png">
     <meta name="twitter:card" content="summary">
     <meta name="twitter:title" content="Lodgrin - Dezvoltare software">
+    <meta name="keywords"
+        content="Lodgrin, Dezvoltare web, Dezvoltare software, Laravel, VueJS, PHP, MySQL, JavaScript, Creare site-uri, Creare aplicații web, Front-end, Back-end, Dezvoltare full-stack, E-commerce, Landing page, Optimizare web, Soluții software, Web design, Programare personalizată, Hosting, SEO, UI/UX, HTML, CSS, Web development România, Firma software București, Creare soft personalizat, LODGRIN SRL, Proiecte Laravel, Web application development, Servicii IT">
     <meta name="twitter:description"
         content="Fie că ai nevoie de o platformă customizată sau de o aplicație scalabilă, suntem aici să transformăm viziunea ta în realitate.">
     <meta name="twitter:image" content="https://lodgrin.com/images/lodgrin_logo_dark_background.png">
