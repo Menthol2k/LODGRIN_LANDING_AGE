@@ -4,7 +4,9 @@ namespace App\Http\Controllers\Tariff;
 
 use App\Models\Tariff;
 use GuzzleHttp\Client;
+use App\Mail\OfferMail;
 use App\Http\Controllers\Controller;
+use Illuminate\Support\Facades\Mail;
 use Illuminate\Validation\ValidationException;
 
 class Index extends Controller
@@ -47,7 +49,7 @@ class Index extends Controller
             ]);
         }
 
-        Tariff::create([
+        $tariff = Tariff::create([
             'name' => request('name'),
             'company' => request('company'),
             'email' => request('email'),
@@ -56,6 +58,8 @@ class Index extends Controller
             'caen' => request('caen')['name'],
             'terms_and_conditions' => request('terms_and_conditions')
         ]);
+
+        Mail::to('office@lodgrin.com')->send(new OfferMail($tariff));
 
         return response()->json(['message' => 'Mesajul a fost trimis cu succes!']);
     }

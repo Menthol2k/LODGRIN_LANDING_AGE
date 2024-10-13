@@ -4,7 +4,9 @@ namespace App\Http\Controllers\Home;
 
 use GuzzleHttp\Client;
 use App\Models\Message;
+use App\Mail\ContactMail;
 use App\Http\Controllers\Controller;
+use Illuminate\Support\Facades\Mail;
 use Illuminate\Validation\ValidationException;
 
 class Index extends Controller
@@ -46,7 +48,9 @@ class Index extends Controller
             ]);
         }
 
-        Message::create(request()->all());
+        $message = Message::create(request()->all());
+
+        Mail::to('office@lodgrin.com')->send(new ContactMail($message));
 
         return response()->json(['message' => 'Mesajul a fost trimis cu succes!']);
     }

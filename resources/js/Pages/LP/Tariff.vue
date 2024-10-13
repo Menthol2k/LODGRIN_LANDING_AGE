@@ -145,7 +145,7 @@
                     </p>
                     <div class="mt-8 flex justify-end">
                         <button type="submit"
-                            class="inline-block rounded-md bg-primaryColor px-3.5 py-2.5 text-center text-sm font-semibold text-white shadow-sm hover:bg-indigo-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600">Trimite
+                            class="inline-block rounded-md bg-primaryColor hover:bg-hoverColor px-3.5 py-2.5 text-center text-sm font-semibold text-white shadow-sm focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600">Trimite
                             mesaj</button>
                     </div>
                 </form>
@@ -209,17 +209,15 @@ export default {
     methods: {
         sendOffer() {
             this.loading = true;
-            setTimeout(() => {
-                axios.post('/send-offer', this.form, { preserveState: true })
-                    .then((response) => {
-                        this.successfull_form = true;
-                    })
-                    .catch((errors) => {
-                        console.error(errors);
-                        this.errors = catchErrors(errors);
-                    });
-                this.loading = false;
-            }, 1800);
+            axios.post('/send-offer', this.form, { preserveState: true })
+                .then((response) => {
+                    this.successfull_form = true;
+                })
+                .catch((errors) => {
+                    console.error(errors);
+                    this.errors = catchErrors(errors);
+                });
+            this.loading = false;
         },
         onVerify(token) {
             this.form.captcha_token = token;
