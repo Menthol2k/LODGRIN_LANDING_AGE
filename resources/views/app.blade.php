@@ -5,7 +5,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <title>{{ 'Lodgrin - Dezvoltare software' }}</title>
+    <title>{{ 'Lodgrin - DEZVOLTARE APLICATII WEB | LANDING PAGE-URI' }}</title>
 
     <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.bunny.net">
@@ -82,14 +82,14 @@
         }
     </script>
 
-    <title>Lodgrin - Dezvoltare software</title>
+    <title>Lodgrin - DEZVOLTARE APLICATII WEB | LANDING PAGE-URI</title>
     <meta name="description"
         content="Fie că ai nevoie de o platformă customizată sau de o aplicație scalabilă, suntem aici să transformăm viziunea ta în realitate. Cu soluții eficiente și design modern, îți oferim exact ceea ce ai nevoie pentru a reuși.">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="author" content="LODGRIN SRL">
     <link rel="canonical" href="https://lodgrin.com/">
-    <meta property="og:title" content="Lodgrin - Dezvoltare software">
+    <meta property="og:title" content="Lodgrin - DEZVOLTARE APLICATII WEB | LANDING PAGE-URI">
     <meta property="og:description"
         content="Fie că ai nevoie de o platformă customizată sau de o aplicație scalabilă, suntem aici să transformăm viziunea ta în realitate.">
     <meta property="og:url" content="https://lodgrin.com/">
@@ -98,7 +98,7 @@
     <meta property="og:locale" content="ro_RO">
     <meta property="og:image" content="https://lodgrin.com/images/lodgrin_logo_white_background.png">
     <meta name="twitter:card" content="summary">
-    <meta name="twitter:title" content="Lodgrin - Dezvoltare software">
+    <meta name="twitter:title" content="Lodgrin - DEZVOLTARE APLICATII WEB | LANDING PAGE-URI">
     <meta name="keywords"
         content="Lodgrin, Dezvoltare web, Dezvoltare software, Laravel, VueJS, PHP, MySQL, JavaScript, Creare site-uri, Creare aplicații web, Front-end, Back-end, Dezvoltare full-stack, E-commerce, Landing page, Optimizare web, Soluții software, Web design, Programare personalizată, Hosting, SEO, UI/UX, HTML, CSS, Web development România, Firma software București, Creare soft personalizat, LODGRIN SRL, Proiecte Laravel, Web application development, Servicii IT">
     <meta name="twitter:description"
