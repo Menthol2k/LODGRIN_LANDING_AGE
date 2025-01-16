@@ -11,7 +11,7 @@ export default {
     },
     methods: {
         renderHCaptcha() {
-            if (window.hcaptcha) {
+            if (window.hcaptcha && this.$refs.hcaptcha) {
                 window.hcaptcha.render(this.$refs.hcaptcha, {
                     sitekey: this.siteKey,
                     callback: this.onVerify,
@@ -20,21 +20,23 @@ export default {
             }
         },
         onVerify(token) {
-            this.$emit('verify', token);
+            this.$emit('verify', token); // Emitere token-ul atunci când este verificat
         },
         onExpire() {
-            this.$emit('expire');
+            this.$emit('expire'); // Emitere când token-ul expiră
             this.resetHCaptcha(); // Reîncarcă hCaptcha atunci când expiră tokenul
         },
         resetHCaptcha() {
-            if (window.hcaptcha) {
+            if (window.hcaptcha && this.$refs.hcaptcha) {
                 window.hcaptcha.reset(this.$refs.hcaptcha); // Resetează hCaptcha
-                this.renderHCaptcha(); // Re-randează hCaptcha pentru a obține un nou token
+                setTimeout(() => {
+                    this.renderHCaptcha(); // Re-randează hCaptcha după resetare
+                }, 300); // Adăugăm o mică întârziere pentru a asigura resetarea corectă
             }
         },
     },
     mounted() {
-        this.renderHCaptcha();
+        this.renderHCaptcha(); // Randează hCaptcha la montarea componentei
     },
 }
 </script>

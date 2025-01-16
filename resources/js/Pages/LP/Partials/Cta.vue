@@ -15,7 +15,7 @@
                     scalabilă, suntem aici să transformăm viziunea ta în realitate. Cu soluții eficiente și design
                     modern, îți oferim exact ceea ce ai nevoie pentru a reuși.</p>
 
-                <div class="mt-10 flex items-center gap-x-6">
+                <div class="mt-10 flex items-center gap-x-6 z-40">
                     <a href="#contact"
                         class="rounded-md bg-primaryColor transition-all px-3.5 py-2.5 text-sm font-semibold text-white shadow-sm hover:bg-hoverColor focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primaryColor">
                         Contactează-ne
@@ -98,11 +98,12 @@
         </div>
         <!-- Separator -->
         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320"
-            class="absolute md:-bottom-[35px] -bottom-[10px] z-20">
+            class="absolute md:-bottom-[35px] -bottom-[10px] z-10">
             <path fill="#04bf62" fill-opacity="1"
                 d="M0,256L120,261.3C240,267,480,277,720,277.3C960,277,1200,267,1320,261.3L1440,256L1440,320L1320,320C1200,320,960,320,720,320C480,320,240,320,120,320L0,320Z">
             </path>
         </svg>
+
     </div>
     <div>
         <a href="#about" class="hidden md:block z-40 animate-bounce absolute left-[50%] right-[50%] bottom-10">

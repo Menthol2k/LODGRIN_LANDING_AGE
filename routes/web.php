@@ -25,6 +25,9 @@ Route::get('language/{language}', function ($language) {
 
 Route::post('/send-message', [Index::class, 'contact_form'])->name('send.message');
 Route::post('/send-offer', [TariffIndex::class, 'tariff_form'])->name('send.offer');
+Route::get('/politica', function() {
+    return Inertia::render('LP/Politica');
+});
 
 Route::get('/tariff', function () {
     return Inertia::render('LP/Tariff', [

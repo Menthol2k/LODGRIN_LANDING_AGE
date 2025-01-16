@@ -66,7 +66,7 @@
                     <div class="flex flex-col">
                         <strong class="text-xl font-bold text-gray-200">Soluții cloud</strong>
                         <span class="text-gray-200/70 text-base"> Oferim soluții de hosting și migrare
-                            către platforme cloud (AWS, DigitalOcean).</span>
+                            către platforme cloud (DigitalOcean).</span>
                     </div>
                 </li>
                 <li class="flex items-start mt-5">

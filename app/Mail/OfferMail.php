@@ -39,7 +39,7 @@ class OfferMail extends Mailable
     public function content(): Content
     {
         return new Content(
-            markdown: 'emails.offer',
+            view: 'emails.offer',
             with: [
                 'offer' => $this->offer,
             ]

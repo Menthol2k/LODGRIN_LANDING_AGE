@@ -155,12 +155,15 @@ const toggleAccordion = () => {
                     <li>
                         <a href="/#contact" class="hover:underline me-4 md:me-6">Contact</a>
                     </li>
+                    <li>
+                        <a href="/politica" class="hover:underline me-4 md:me-6">Politica</a>
+                    </li>
                 </ul>
             </div>
         </div>
         <hr class="my-6 border-gray-200 sm:mx-auto dark:border-gray-700 lg:my-8" />
         <div class="pb-8">
-            <span class="flex justify-center text-sm text-gray-500 sm:text-center dark:text-gray-400">© {{ new Date().getFullYear() }}
+            <span class="flex justify-center text-sm text-gray-500 sm:text-center dark:text-gray-400">© {{ new Date().getFullYear() }} &nbsp;
                 <a href="https://lodgrin.com/" class="hover:underline">LODGRIN S.R.L.</a>. Toate drepturile
                 rezervate.</span>
         </div>
