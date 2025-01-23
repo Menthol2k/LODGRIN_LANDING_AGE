@@ -3,15 +3,10 @@
         <div class="md:flex md:justify-between md:space-x-32 px-8 items-center mx-auto max-w-8xl">
             <div>
                 <h1 class="text-white font-bold md:text-6xl text-3xl drop-shadow-lg tracking-wide">
-                    DESPRE&nbsp;NOI
+                    {{ __("DESPRE NOI") }}
                 </h1>
                 <p class="text-white text-lg mt-4 font-medium drop-shadow-lg z-40">
-                    La LODGRIN, suntem pasionați de tehnologie și inovație, oferind soluții digitale personalizate.
-                    Deși suntem o firmă nouă, avem experiență valoroasă și suntem pregătiți să facem față
-                    provocărilor. Misiunea noastră este să sprijinim afaceri de toate dimensiunile în digitalizare,
-                    livrând servicii de cea mai înaltă calitate. Credem în puterea colaborării și lucrăm îndeaproape
-                    cu clienții pentru a reflecta viziunea și obiectivele lor. Hai să construim împreună viitorul
-                    afacerii tale!
+                    {{__("La LODGRIN, suntem pasionați de tehnologie și inovație, oferind soluții digitale personalizate. Deși suntem o firmă nouă, avem experiență valoroasă și suntem pregătiți să facem față provocărilor. Misiunea noastră este să sprijinim afaceri de toate dimensiunile în digitalizare, livrând servicii de cea mai înaltă calitate. Credem în puterea colaborării și lucrăm îndeaproape cu clienții pentru a reflecta viziunea și obiectivele lor. Hai să construim împreună viitorul afacerii tale!")}}
                 </p>
             </div>
             <img class="hidden md:flex" src="/assets/about.svg" width="540px" />

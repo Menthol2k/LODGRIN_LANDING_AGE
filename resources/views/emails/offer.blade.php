@@ -100,7 +100,7 @@
         <h2>Detalii mesaj:</h2>
         <ul>
             <li><strong>Email</strong>: <a href="mailto:{{ $offer->email }}">{{ $offer->email }}</a></li>
-            <li><strong>CAEN</strong>: <a href="mailto:{{ $offer->caen }}">{{ $offer->caen }}</a></li>
+{{--            <li><strong>CAEN</strong>: <a href="mailto:{{ $offer->caen }}">{{ $offer->caen }}</a></li>--}}
             <li><strong>Telefon</strong>: <a href="tel:{{ $offer->phone }}">{{ $offer->phone }}</a></li>
             <li><strong>Mesaj</strong>: "{{ $offer->message }}"</li>
         </ul>

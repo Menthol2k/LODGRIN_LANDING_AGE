@@ -10,10 +10,8 @@
                     fill="currentColor" fill-rule="evenodd" clip-rule="evenodd"></path>
             </svg></span>
         <div>
-            <h3 class="font-semibold text-xl text-white"> Soluții dezvoltare landing
-                page-uri</h3>
-            <p class="mt-1 text-gray-300"> Oferim soluții rapide și eficiente pentru gestionarea
-                conținutului online și crearea de pagini de prezentare care atrag și convertează.</p>
+            <h3 class="font-semibold text-xl text-white"> {{ __("Soluții dezvoltare landing page-uri") }}</h3>
+            <p class="mt-1 text-gray-300"> {{__("Oferim soluții rapide și eficiente pentru gestionarea conținutului online și crearea de pagini de prezentare care atrag și convertează.") }}</p>
             <div class="mt-5">
                 <ul>
                     <li class="flex items-start mt-10">
@@ -23,11 +21,8 @@
                                 d="M9 12.75 11.25 15 15 9.75M21 12a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z" />
                         </svg>
                         <div class="flex flex-col">
-                            <strong class="text-xl font-bold text-gray-200">Dezvoltare CMS
-                                personalizate</strong>
-                            <span class="text-gray-200/70 text-base"> Construim sisteme de administrare a
-                                conținutului adaptate exact nevoilor tale (WordPress CMS,
-                                etc.).</span>
+                            <strong class="text-xl font-bold text-gray-200">{{ __("Dezvoltare CMS personalizate") }}</strong>
+                            <span class="text-gray-200/70 text-base"> {{__("Construim sisteme de administrare a conținutului adaptate exact nevoilor tale.") }}</span>
                         </div>
                     </li>
                     <li class="flex items-start mt-5">
@@ -37,10 +32,8 @@
                                 d="M9 12.75 11.25 15 15 9.75M21 12a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z" />
                         </svg>
                         <div class="flex flex-col">
-                            <strong class="text-xl font-bold text-gray-200">Landing page-uri pentru
-                                conversii</strong>
-                            <span class="text-gray-200/70 text-base"> Design și implementare de pagini de
-                                vânzări și prezentare, rapide și eficiente.</span>
+                            <strong class="text-xl font-bold text-gray-200">{{ __("Landing page-uri pentru conversii") }}</strong>
+                            <span class="text-gray-200/70 text-base"> {{ __("Design și implementare de pagini de vânzări și prezentare, rapide și eficiente.") }}</span>
                         </div>
                     </li>
                     <li class="flex items-start mt-5">
@@ -50,9 +43,8 @@
                                 d="M9 12.75 11.25 15 15 9.75M21 12a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z" />
                         </svg>
                         <div class="flex flex-col">
-                            <strong class="text-xl font-bold text-gray-200">Design responsive</strong>
-                            <span class="text-gray-200/70 text-base">sigurăm compatibilitatea completă a
-                                paginilor cu dispozitivele mobile și desktop.</span>
+                            <strong class="text-xl font-bold text-gray-200">{{ __("Design Responsiv") }}</strong>
+                            <span class="text-gray-200/70 text-base">{{ __("Asigurăm compatibilitatea completă a paginilor cu dispozitivele mobile și desktop.") }}</span>
                         </div>
                     </li>
                     <li class="flex items-start mt-5">
@@ -62,9 +54,8 @@
                                 d="M9 12.75 11.25 15 15 9.75M21 12a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z" />
                         </svg>
                         <div class="flex flex-col">
-                            <strong class="text-xl font-bold text-gray-200">Optimizare SEO</strong>
-                            <span class="text-gray-200/70 text-base"> Integrare și optimizare pentru
-                                motoarele de căutare pentru o vizibilitate sporită.</span>
+                            <strong class="text-xl font-bold text-gray-200">{{ __("Optimizare SEO") }}</strong>
+                            <span class="text-gray-200/70 text-base"> {{ __("Integrare și optimizare pentru motoarele de căutare pentru o vizibilitate sporită.") }}</span>
                         </div>
                     </li>
                     <li class="flex items-start mt-5">
@@ -74,10 +65,8 @@
                                 d="M9 12.75 11.25 15 15 9.75M21 12a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z" />
                         </svg>
                         <div class="flex flex-col">
-                            <strong class="text-xl font-bold text-gray-200">Mentenanță și
-                                actualizări</strong>
-                            <span class="text-gray-200/70 text-base"> Suport tehnic și actualizări continue
-                                pentru site-uri și landing page-uri.</span>
+                            <strong class="text-xl font-bold text-gray-200">{{ __("Mentenanță și actualizări") }}</strong>
+                            <span class="text-gray-200/70 text-base"> {{__("Asistență constantă pentru o funcționare fără probleme.") }}</span>
                         </div>
                     </li>
                 </ul>

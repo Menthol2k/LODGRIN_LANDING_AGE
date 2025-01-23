@@ -3,24 +3,23 @@
         <div class="flex justify-between items-center mx-auto max-w-8xl">
             <div class="px-6 lg:px-8 z-20">
                 <h2 class="text-3xl font-bold tracking-tight text-gray-900 sm:text-7xl drop-shadow-lg">
-                    <span class="text-primaryColor font-extrabold py-1 rounded-md">Dezvoltăm</span> soluții
-                    web.
+                    <span class="text-primaryColor font-extrabold py-1 rounded-md">{{ __("Dezvoltăm") }}</span> {{__("soluții web.")}}
                 </h2>
                 <h2 class="text-3xl font-bold tracking-tight text-gray-900 sm:text-7xl drop-shadow-lg">
-                    <span class="text-primaryColor font-extrabold py-1 rounded-md">Amplificăm</span> succesul
-                    afacerii tale.
+                    <span class="text-primaryColor font-extrabold py-1 rounded-md">{{ __("Amplificăm") }}</span>
+                    {{ __("succesul afacerii tale.") }}
                 </h2>
 
-                <p class="mt-6 text-lg text-gray-700">Fie că ai nevoie de o platformă customizată sau de o aplicație
-                    scalabilă, suntem aici să transformăm viziunea ta în realitate. Cu soluții eficiente și design
-                    modern, îți oferim exact ceea ce ai nevoie pentru a reuși.</p>
+                <p class="mt-6 text-lg text-gray-700">{{
+                        __("Fie că ai nevoie de o platformă customizată sau de o aplicație scalabilă, suntem aici să transformăm viziunea ta în realitate. Cu soluții eficiente și design modern, îți oferim exact ceea ce ai nevoie pentru a reuși.")
+                    }}</p>
 
                 <div class="mt-10 flex items-center gap-x-6 z-40">
                     <a href="#contact"
                         class="rounded-md bg-primaryColor transition-all px-3.5 py-2.5 text-sm font-semibold text-white shadow-sm hover:bg-hoverColor focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primaryColor">
-                        Contactează-ne
+                        {{ __("Contactează-ne") }}
                     </a>
-                    <a href="#about" class="text-sm font-semibold leading-6 text-gray-900">Vezi mai multe <span
+                    <a href="#about" class="text-sm font-semibold leading-6 text-gray-900">{{ __("Vezi mai multe") }} <span
                             aria-hidden="true">→</span></a>
                 </div>
 
@@ -35,9 +34,8 @@
                                         d="M9 12.75 11.25 15 15 9.75M21 12a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z" />
                                 </svg>
                                 <div class="flex flex-col">
-                                    <strong class="text-xl font-bold">Dezvoltare Personalizată:</strong>
-                                    <span class="text-gray-600 text-base">Soluții tailor-made pentru nevoile tale
-                                        specifice.</span>
+                                    <strong class="text-xl font-bold">{{ __("Dezvoltare Personalizată") }}:</strong>
+                                    <span class="text-gray-600 text-base">{{ __("Soluții tailor-made pentru nevoile tale specifice.") }}</span>
                                 </div>
                             </li>
                             <li class="flex items-start">
@@ -48,9 +46,8 @@
                                         d="M9 12.75 11.25 15 15 9.75M21 12a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z" />
                                 </svg>
                                 <div class="flex flex-col">
-                                    <strong class="text-xl font-bold">Integrare API:</strong>
-                                    <span class="text-gray-600 text-base">Conectăm aplicațiile tale pentru a lucra
-                                        eficient împreună.</span>
+                                    <strong class="text-xl font-bold">{{ __("Integrare API") }}:</strong>
+                                    <span class="text-gray-600 text-base">{{ __("Conectăm aplicațiile tale pentru a lucra eficient împreună.") }}</span>
                                 </div>
                             </li>
                             <li class="flex items-start">
@@ -61,9 +58,8 @@
                                         d="M9 12.75 11.25 15 15 9.75M21 12a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z" />
                                 </svg>
                                 <div class="flex flex-col">
-                                    <strong class="text-xl font-bold">Design Responsiv:</strong>
-                                    <span class="text-gray-600 text-base">Interfețe care arată bine pe orice
-                                        dispozitiv.</span>
+                                    <strong class="text-xl font-bold">{{ __("Design Responsiv") }}:</strong>
+                                    <span class="text-gray-600 text-base">{{ __("Interfețe care arată bine pe orice dispozitiv.") }}</span>
                                 </div>
                             </li>
                             <li class="flex items-start">
@@ -74,20 +70,17 @@
                                         d="M9 12.75 11.25 15 15 9.75M21 12a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z" />
                                 </svg>
                                 <div class="flex flex-col">
-                                    <strong class="text-xl font-bold">Suport Tehnic:</strong>
-                                    <span class="text-gray-600 text-base">Asistență constantă pentru o funcționare
-                                        fără probleme.</span>
+                                    <strong class="text-xl font-bold">{{ __("Suport Tehnic") }}:</strong>
+                                    <span class="text-gray-600 text-base">{{ __("Asistență constantă pentru o funcționare fără probleme.") }}</span>
                                 </div>
                             </li>
                         </ul>
                     </div>
 
                     <div class="flex flex-col items-start md:w-4/12 w-full relative md:mt-0 mt-10 md:pb-0 pb-10">
-                        <p class="text-4xl text-primaryColor font-extrabold text-center w-full z-20">Dezvoltăm chiar
-                            și
-                        </p>
+                        <p class="text-4xl text-primaryColor font-extrabold text-center w-full z-20">{{ __("Dezvoltăm chiar și")}}</p>
                         <h1 class="text-2xl text-secondaryColor font-bold min-h-[60px] text-center z-20 w-full">
-                            {{ currentService }}
+                            {{ __(currentService) }}
                         </h1>
                     </div>
                 </div>

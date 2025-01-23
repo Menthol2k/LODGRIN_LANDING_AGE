@@ -23,6 +23,19 @@ class AppServiceProvider extends ServiceProvider
      */
     public function boot(): void
     {
-        Schema::defaultStringLength(191);
+
+
+        Inertia::share([
+            'locale' => function () {
+                return app()->getLocale();
+            },
+            'language' => function () {
+                return translations(
+                    resource_path('lang/'.app()->getLocale().'.json')
+                );
+            },
+        ]);
+
+
     }
 }

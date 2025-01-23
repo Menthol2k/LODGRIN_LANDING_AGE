@@ -20,10 +20,8 @@
                                 fill="url(#83fd4e5a-9d52-42fc-97b6-718e5d7ee527)" />
                         </svg>
                     </div>
-                    <h2 class="text-6xl font-bold tracking-tight text-primaryColor">Contact</h2>
-                    <p class="mt-6 text-lg leading-8 text-gray-600">Vrem să fim mereu la un mesaj distanță! Echipa
-                        noastră este pregătită să îți ofere suportul de care ai nevoie pentru a-ți transforma ideile în
-                        realitate. Nu ezita să ne contactezi pentru orice întrebări sau colaborări!</p>
+                    <h2 class="text-6xl font-bold tracking-tight text-primaryColor">{{ __("Contact") }}</h2>
+                    <p class="mt-6 text-lg leading-8 text-gray-600">{{__("Vrem să fim mereu la un mesaj distanță! Echipa noastră este pregătită să îți ofere suportul de care ai nevoie pentru a-ți transforma ideile în realitate. Nu ezita să ne contactezi pentru orice întrebări sau colaborări!") }}</p>
                     <dl class="mt-10 space-y-4 text-base leading-7 text-gray-600">
                         <div class="flex gap-x-4">
                             <dt class="flex-none">
@@ -35,12 +33,12 @@
                                 </svg>
                             </dt>
                             <dd>Ilfov, Chiajna, Strada Tineretului NR. 37C
-                                <br>Cod poștal: 077040
+                                <br>{{ __("Cod poștal") }}: 077040, Romania
                             </dd>
                         </div>
                         <div class="flex gap-x-4">
                             <dt class="flex-none">
-                                <span class="sr-only">Telefon</span>
+                                <span class="sr-only">{{ __("Telefon") }}</span>
                                 <svg class="h-7 w-6 text-gray-400" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
                                     stroke="currentColor" aria-hidden="true" data-slot="icon">
                                     <path stroke-linecap="round" stroke-linejoin="round"
@@ -69,72 +67,69 @@
                 <div class="mx-auto max-w-xl lg:mr-0 lg:max-w-lg">
                     <div class="grid grid-cols-1 gap-x-8 gap-y-6 sm:grid-cols-2">
                         <div class="md:col-span-1 col-span-2">
-                            <label for="first-name" class="block text-sm font-semibold leading-6 text-gray-900">Nume &
-                                Prenume*</label>
+                            <label for="first-name" class="block text-sm font-semibold leading-6 text-gray-900">{{__("Nume & Prenume") }}*</label>
                             <div class="mt-1">
-                                <input v-model="form.name" placeholder="Popescu Ion" type="text" name="first-name"
+                                <input v-model="form.name" :placeholder="__('Popescu Ion')" type="text" name="first-name"
                                     id="first-name" autocomplete="given-name"
                                     class="block w-full rounded-md border-0 px-3.5 py-2 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-primaryColor sm:text-sm sm:leading-6">
                             </div>
                             <div>
-                                <p v-if="errors.name" class="text-red-500 text-sm font-medium mt-1">{{ errors.name }}
+                                <p v-if="errors.name" class="text-red-500 text-sm font-medium mt-1">{{ __(errors.name) }}
                                 </p>
                             </div>
                         </div>
                         <div class="md:col-span-1 col-span-2">
-                            <label for="last-name" class="block text-sm font-semibold leading-6 text-gray-900">Companie
-                                / CUI</label>
+                            <label for="last-name" class="block text-sm font-semibold leading-6 text-gray-900">{{__("Companie / CUI") }}</label>
                             <div class="mt-1">
-                                <input v-model="form.company" placeholder="Denumire companie SRL" type="text"
+                                <input v-model="form.company" :placeholder="__('Denumire companie SRL')" type="text"
                                     name="last-name" id="last-name" autocomplete="family-name"
                                     class="block w-full rounded-md border-0 px-3.5 py-2 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-primaryColor sm:text-sm sm:leading-6">
                             </div>
                             <div>
-                                <p v-if="errors.company" class="text-red-500 text-sm font-medium mt-1">{{ errors.company
+                                <p v-if="errors.company" class="text-red-500 text-sm font-medium mt-1">{{ __(errors.company)
                                     }}
                                 </p>
                             </div>
                         </div>
                         <div class="col-span-2">
                             <label for="email"
-                                class="block text-sm font-semibold leading-6 text-gray-900">Email*</label>
+                                class="block text-sm font-semibold leading-6 text-gray-900">{{ __("Email") }}*</label>
                             <div class="mt-1">
-                                <input v-model="form.email" placeholder="popescu.ios@email.ro" name="email" id="email"
+                                <input v-model="form.email" :placeholder="__('popescu.ios@email.ro')" name="email" id="email"
                                     autocomplete="email"
                                     class="block w-full rounded-md border-0 px-3.5 py-2 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-primaryColor sm:text-sm sm:leading-6">
                             </div>
                             <div>
-                                <p v-if="errors.email" class="text-red-500 text-sm font-medium mt-1">{{ errors.email }}
+                                <p v-if="errors.email" class="text-red-500 text-sm font-medium mt-1">{{ __(errors.email) }}
                                 </p>
                             </div>
                         </div>
                         <div class="col-span-2">
-                            <label for="phone-number" class="block text-sm font-semibold leading-6 text-gray-900">Numar
-                                de telefon*</label>
+                            <label for="phone-number" class="block text-sm font-semibold leading-6 text-gray-900">{{__("Numar de telefon")}}*</label>
                             <div class="mt-1">
-                                <input v-model="form.phone" placeholder="0712 345 678" type="tel" name="phone-number"
+                                <input v-model="form.phone" :placeholder="__('0712 345 678')" type="tel" name="phone-number"
                                     id="phone-number" autocomplete="tel"
                                     class="block w-full rounded-md border-0 px-3.5 py-2 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-primaryColor sm:text-sm sm:leading-6">
                             </div>
                             <div>
-                                <p v-if="errors.phone" class="text-red-500 text-sm font-medium mt-1">{{ errors.phone }}
+                                <p v-if="errors.phone" class="text-red-500 text-sm font-medium mt-1">{{ __(errors.phone) }}
                                 </p>
                             </div>
                         </div>
                         <div class="col-span-2">
                             <label for="message"
-                                class="block text-sm font-semibold leading-6 text-gray-900">Mesaj*</label>
+                                class="block text-sm font-semibold leading-6 text-gray-900">{{ __("Mesaj") }}*</label>
                             <div class="mt-1">
-                                <textarea v-model="form.message" placeholder="Mesajul dvs..." name="message"
+                                <textarea v-model="form.message" :placeholder="__('Mesajul dvs...')" name="message"
                                     id="message" rows="4"
                                     class="block w-full rounded-md border-0 px-3.5 py-2 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-primaryColor sm:text-sm sm:leading-6"></textarea>
                             </div>
                             <div class="flex items-center mt-1"
                                 :class="errors.message ? 'justify-between' : 'justify-end'">
-                                <p v-if="errors.message" class="text-red-500 text-sm font-medium">{{ errors.message
+                                <p v-if="errors.message" class="text-red-500 text-sm font-medium">{{ __(errors.message)
                                     }}
                                 </p>
-                                <p class="text-gray-400 text-xs">{{ form.message ? form.message.length : 0 }} caractere.
+                                <p class="text-gray-400 text-xs">{{ form.message ? form.message.length : 0 }} {{__("caractere")}}.
                                 </p>
                             </div>
                         </div>
@@ -152,23 +147,21 @@
                             </div>
                             <label @click="form.terms_and_conditions = !form.terms_and_conditions"
                                 class="text-sm leading-6 text-gray-600" id="switch-1-label">
-                                Sunt de acord cu <a href="/terms-and-conditions" class="underline">termenii și
-                                    condițiile</a> de utilizare. Sunt
-                                de acord cu <a href="/politics" class="underline">politica
-                                    de
-                                    prelucrare a datelor</a>. Am peste 16 ani.
+                                {{ __("Sunt de acord cu") }} <a href="/politica" class="underline">{{__("termenii și condițiile")
+                                }}</a> {{ __("de utilizare") }}. {{ __('Sunt de acord cu') }} <a href="/politica" class="underline">
+                                {{ __("politica de prelucrare a datelor") }}</a>. {{ __("Am peste 16 ani") }}.
                             </label>
                         </div>
                         <div class="col-span-2">
                             <p v-if="errors.terms_and_conditions" class="text-red-500 text-sm font-medium">{{
-                                errors.terms_and_conditions
+                                    __(errors.terms_and_conditions)
                                 }}
                             </p>
                         </div>
                     </div>
                     <HCaptcha @verify="onVerify" @expire="onExpire" />
                     <p v-if="errors.captcha_token" class="text-red-500 text-sm font-medium">{{
-                        errors.captcha_token
+                            __(errors.captcha_token)
                     }}
                     </p>
                     <div class="mt-8 flex justify-end">
@@ -184,8 +177,7 @@
                                 </path>
                             </svg>
                             <p>
-                                Trimite
-                                formularul</p>
+                                {{__("Trimite formularul")}}</p>
                         </button>
                     </div>
                 </div>

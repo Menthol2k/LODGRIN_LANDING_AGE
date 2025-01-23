@@ -12,15 +12,8 @@ Route::get('/', function () {
 })->name('home');
 
 Route::get('language/{language}', function ($language) {
-    Session()->put('locale', $language);
-    if ($language != auth()->user()->language) {
-        auth()->user()->update([
-            'language' => $language
-        ]);
-        return redirect()->back()->with(['success' => ['message' => __('Limba a fost schimbata')]]);
-    } else {
-        return redirect()->back();
-    }
+    session()->put('locale', $language);
+    return redirect()->back();
 })->name('language');
 
 Route::post('/send-message', [Index::class, 'contact_form'])->name('send.message');

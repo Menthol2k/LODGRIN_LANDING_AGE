@@ -11,9 +11,8 @@
                         fill="currentColor" fill-rule="evenodd" clip-rule="evenodd"></path>
                 </svg></span>
             <div>
-                <h3 class="font-semibold text-xl text-white"> Dezvoltare și optimizare aplicații web</h3>
-                <p class="mt-1 text-gray-300"> Dezvoltăm și optimizăm aplicații web personalizate pentru
-                    afacerea ta, utilizând tehnologii moderne pentru a asigura scalabilitate și performanță.
+                <h3 class="font-semibold text-xl text-white"> {{ __("Dezvoltare și optimizare aplicații web") }}</h3>
+                <p class="mt-1 text-gray-300"> {{__("Dezvoltăm și optimizăm aplicații web personalizate pentru afacerea ta, utilizând tehnologii moderne pentru a asigura scalabilitate și performanță.")}}
                 </p>
                 <div class="mt-5">
                     <ul>
@@ -24,10 +23,8 @@
                                     d="M9 12.75 11.25 15 15 9.75M21 12a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z" />
                             </svg>
                             <div class="flex flex-col">
-                                <strong class="text-xl font-bold text-gray-200">Dezvoltare aplicații
-                                    personalizate</strong>
-                                <span class="text-gray-200/70 text-base"> Proiectăm și construim aplicații web
-                                    de la zero, adaptate complet cerințelor tale.</span>
+                                <strong class="text-xl font-bold text-gray-200">{{ __("Dezvoltare aplicații personalizate") }}</strong>
+                                <span class="text-gray-200/70 text-base"> {{ __("Proiectăm și construim aplicații web de la zero, adaptate complet cerințelor tale.") }}</span>
                             </div>
                         </li>
                         <li class="flex items-start mt-5">
@@ -37,11 +34,8 @@
                                     d="M9 12.75 11.25 15 15 9.75M21 12a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z" />
                             </svg>
                             <div class="flex flex-col">
-                                <strong class="text-xl font-bold text-gray-200">Optimizare
-                                    performanță</strong>
-                                <span class="text-gray-200/70 text-base"> Creștem viteza și eficiența
-                                    aplicațiilor existente pentru o experiență îmbunătățită a
-                                    utilizatorilor.</span>
+                                <strong class="text-xl font-bold text-gray-200">{{ __("Optimizare performanță") }}</strong>
+                                <span class="text-gray-200/70 text-base"> {{__("Creștem viteza și eficiența aplicațiilor existente pentru o experiență îmbunătățită a utilizatorilor.") }}</span>
                             </div>
                         </li>
                         <li class="flex items-start mt-5">
@@ -51,10 +45,8 @@
                                     d="M9 12.75 11.25 15 15 9.75M21 12a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z" />
                             </svg>
                             <div class="flex flex-col">
-                                <strong class="text-xl font-bold text-gray-200">Mentenanță și suport
-                                    continuu</strong>
-                                <span class="text-gray-200/70 text-base">Asigurăm actualizări regulate și
-                                    rezolvarea rapidă a eventualelor probleme tehnice.</span>
+                                <strong class="text-xl font-bold text-gray-200">{{ __("Mentenanță și suport continuu") }}</strong>
+                                <span class="text-gray-200/70 text-base">{{ __("Asigurăm actualizări regulate și rezolvarea rapidă a eventualelor probleme tehnice.") }}</span>
                             </div>
                         </li>
                         <li class="flex items-start mt-5">
@@ -64,9 +56,8 @@
                                     d="M9 12.75 11.25 15 15 9.75M21 12a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z" />
                             </svg>
                             <div class="flex flex-col">
-                                <strong class="text-xl font-bold text-gray-200">Integrare API</strong>
-                                <span class="text-gray-200/70 text-base"> Conectăm aplicațiile tale cu alte
-                                    servicii externe pentru automatizarea proceselor.</span>
+                                <strong class="text-xl font-bold text-gray-200">{{ __("Integrare API") }}</strong>
+                                <span class="text-gray-200/70 text-base"> {{ __("Conectăm aplicațiile tale pentru a lucra eficient împreună.") }}</span>
                             </div>
                         </li>
                         <li class="flex items-start mt-5">
@@ -76,9 +67,8 @@
                                     d="M9 12.75 11.25 15 15 9.75M21 12a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z" />
                             </svg>
                             <div class="flex flex-col">
-                                <strong class="text-xl font-bold text-gray-200">Export date</strong>
-                                <span class="text-gray-200/70 text-base"> Implementăm funcționalități de export
-                                    de date în format Excel și PDF direct din aplicațiile dezvoltate.</span>
+                                <strong class="text-xl font-bold text-gray-200">{{ __("Export date") }}</strong>
+                                <span class="text-gray-200/70 text-base"> {{ __("Implementăm funcționalități de export de date în format Excel și PDF direct din aplicațiile dezvoltate.") }}</span>
                             </div>
                         </li>
                     </ul>

@@ -27,7 +27,7 @@
         <div class="md:flex md:justify-between md:space-x-32 items-center mx-auto max-w-8xl mt-16">
             <div>
                 <h1 class="text-primaryColor font-bold md:text-6xl text-3xl drop-shadow-lg">
-                    Testimoniale si recenzii
+                    {{ __("Testimoniale și recenzii") }}
                 </h1>
             </div>
         </div>
@@ -37,7 +37,7 @@
                     <div class="caspart-bottom show">
                         <p class="mt-8 max-w-lg text-gray-800 font-bold text-xl">
 
-                            Iată ce spun câțiva dintre clienții noștri fideli despre experiența lor cu Lodgrin
+                            {{__("Iată ce spun câțiva dintre clienții noștri fideli despre experiența lor cu Lodgrin")}}
                         </p>
                     </div>
                 </div>
@@ -47,14 +47,11 @@
                     <div>
                         <div class="mt-4">
                             <h3 class="text-xl font-bold text-primaryColor sm:text-2xl">
-                                Andrei P. | antreprenor
+                                Andrei P. | {{ __("antreprenor") }}
                             </h3>
 
                             <p class="mt-4 text-gray-700 font-medium">
-                                "Am apelat la LODGRIN pentru dezvoltarea aplicației noastre de management și nu am putut
-                                fi mai fericit! Echipa a fost super deschisă la ideile noastre și au reușit să ne ofere
-                                exact ce ne-am dorit. Chiar și când am avut întrebări sau nevoie de modificări, au fost
-                                mereu disponibili. Recomand cu căldură!"
+                                "{{__("Am apelat la LODGRIN pentru dezvoltarea aplicației noastre de management și nu am putut fi mai fericit! Echipa a fost super deschisă la ideile noastre și au reușit să ne ofere exact ce ne-am dorit. Chiar și când am avut întrebări sau nevoie de modificări, au fost mereu disponibili. Recomand cu căldură!") }}"
                             </p>
                         </div>
                     </div>
@@ -67,13 +64,11 @@
 
                         <div class="mt-4">
                             <h3 class="text-xl font-bold text-primaryColor sm:text-2xl">
-                                Maria T. | manager de proiect
+                                Maria T. | {{ __("manager de proiect") }}
                             </h3>
 
                             <p class="mt-4 text-gray-700 font-medium">
-                                "Întâmpinam mereu provocări în ceea ce privește sistemele noastre IT, dar echipa de la
-                                LODGRIN a fost un real sprijin. Au reușit să integreze soluții noi rapid și fără dureri
-                                de cap. Lucrăm acum mult mai eficient! Mulțumim, LODGRIN!"
+                                "{{__("Întâmpinam mereu provocări în ceea ce privește sistemele noastre IT, dar echipa de la LODGRIN a fost un real sprijin. Au reușit să integreze soluții noi rapid și fără dureri de cap. Lucrăm acum mult mai eficient! Mulțumim, LODGRIN!") }}"
                             </p>
                         </div>
                     </div>
@@ -86,13 +81,11 @@
 
                         <div class="mt-4">
                             <h3 class="text-xl font-bold text-primaryColor sm:text-2xl">
-                                Daniel S. | director de marketing
+                                Daniel S. | {{ __("director de marketing") }}
                             </h3>
 
                             <p class="mt-4 text-gray-700 font-medium">
-                                "Nu am avut cele mai bune experiențe cu furnizorii de IT, dar cu LODGRIN a fost diferit.
-                                Oamenii ăștia chiar știu ce fac! Au făcut totul să decurgă ușor și au rezolvat rapid
-                                toate problemele pe care le-am avut."
+                                "{{__("Nu am avut cele mai bune experiențe cu furnizorii de IT, dar cu LODGRIN a fost diferit. Oamenii ăștia chiar știu ce fac! Au făcut totul să decurgă ușor și au rezolvat rapid toate problemele pe care le-am avut.") }}"
                             </p>
                         </div>
                     </div>
@@ -103,13 +96,11 @@
 
                         <div class="mt-4">
                             <h3 class="text-xl font-bold text-primaryColor sm:text-2xl">
-                                Ioana R. | proprietar de afacere
+                                Ioana R. | {{ __("proprietar de afacere") }}
                             </h3>
 
                             <p class="mt-4 text-gray-700 font-medium">
-                                "Îmi place să lucrez cu LODGRIN. Au o echipă fantastică și mereu găsesc soluții rapide.
-                                Ne-au ajutat să dezvoltam aplicația noastră, iar clienții noștri au observat
-                                diferența. Am fost plăcut surprinsă de cât de bine comunică! Vă mulțumesc, echipă!"
+                                "{{ __("Îmi place să lucrez cu LODGRIN. Au o echipă fantastică și mereu găsesc soluții rapide. Ne-au ajutat să dezvoltam aplicația noastră, iar clienții noștri au observat diferența. Am fost plăcut surprinsă de cât de bine comunică! Vă mulțumesc, echipă!") }}"
                             </p>
                         </div>
                     </div>
@@ -120,13 +111,11 @@
 
                         <div class="mt-4">
                             <h3 class="text-xl font-bold text-primaryColor sm:text-2xl">
-                                Cristian L. | specialist IT
+                                Cristian L. | {{ __("specialist IT") }}
                             </h3>
 
                             <p class="mt-4 text-gray-700 font-medium">
-                                "Ca specialist IT, am colaborat cu LODGRIN la mai multe proiecte. Pot să spun că sunt
-                                foarte profesioniști, dar și foarte prietenoși. Întotdeauna mi-au oferit sfaturi
-                                valoroase și soluții inovatoare. Cu siguranță voi continua colaborarea!"
+                                "{{__("Ca specialist IT, am colaborat cu LODGRIN la mai multe proiecte. Pot să spun că sunt foarte profesioniști, dar și foarte prietenoși. Întotdeauna mi-au oferit sfaturi valoroase și soluții inovatoare. Cu siguranță voi continua colaborarea!") }}"
                             </p>
                         </div>
                     </div>
@@ -137,13 +126,11 @@
 
                         <div class="mt-4">
                             <h3 class="text-xl font-bold text-primaryColor sm:text-2xl">
-                                Elena G. | manager HR
+                                Elena G. | {{ __("manager HR") }}
                             </h3>
 
                             <p class="mt-4 text-gray-700 font-medium">
-                                "Serviciile de la LODGRIN au fost un adevărat salvator pentru noi. Ne-au ajutat să
-                                optimizăm sistemele și să economisim timp. Am avut parte de suport constant și foarte
-                                eficient. Cu siguranță le voi recomanda si colegilor din industrie!"
+                                "{{__("Serviciile de la LODGRIN au fost un adevărat salvator pentru noi. Ne-au ajutat să optimizăm sistemele și să economisim timp. Am avut parte de suport constant și foarte eficient. Cu siguranță le voi recomanda si colegilor din industrie!") }}"
                             </p>
                         </div>
                     </div>

@@ -10,11 +10,9 @@
                     fill="currentColor" fill-rule="evenodd" clip-rule="evenodd"></path>
             </svg></span>
         <div>
-            <h3 class="font-semibold text-xl text-white">Consultanță IT și automatizare procese
+            <h3 class="font-semibold text-xl text-white">{{ __("Consultanță IT și automatizare procese") }}
             </h3>
-            <p class="mt-1 text-gray-300"> Te ajutăm să identifici și să implementezi soluții
-                tehnologice care automatizează procesele, reduc costurile și cresc eficiența afacerii
-                tale.</p>
+            <p class="mt-1 text-gray-300"> {{__("Te ajutăm să identifici și să implementezi soluții tehnologice care automatizează procesele, reduc costurile și cresc eficiența afacerii tale.") }}</p>
         </div>
         <div>
             <ul>
@@ -25,10 +23,8 @@
                             d="M9 12.75 11.25 15 15 9.75M21 12a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z" />
                     </svg>
                     <div class="flex flex-col">
-                        <strong class="text-xl font-bold text-gray-200">Analiză și consultanță
-                            IT</strong>
-                        <span class="text-gray-200/70 text-base"> Identificăm nevoile tale tehnologice și
-                            oferim soluții personalizate.</span>
+                        <strong class="text-xl font-bold text-gray-200">{{ __("Analiză și consultanță IT") }}</strong>
+                        <span class="text-gray-200/70 text-base"> {{ __("Identificăm nevoile tale tehnologice și oferim soluții personalizate.") }}</span>
                     </div>
                 </li>
                 <li class="flex items-start mt-5">
@@ -38,10 +34,8 @@
                             d="M9 12.75 11.25 15 15 9.75M21 12a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z" />
                     </svg>
                     <div class="flex flex-col">
-                        <strong class="text-xl font-bold text-gray-200">Automatizare procese:</strong>
-                        <span class="text-gray-200/70 text-base"> Implementăm soluții de automatizare de la
-                            gestionarea stocurilor la facturare
-                            automată.</span>
+                        <strong class="text-xl font-bold text-gray-200">{{ __("Automatizare procese") }}</strong>
+                        <span class="text-gray-200/70 text-base"> {{ __("Implementăm soluții de automatizare de la gestionarea stocurilor la facturare automată.") }}</span>
                     </div>
                 </li>
                 <li class="flex items-start mt-5">
@@ -51,10 +45,8 @@
                             d="M9 12.75 11.25 15 15 9.75M21 12a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z" />
                     </svg>
                     <div class="flex flex-col">
-                        <strong class="text-xl font-bold text-gray-200">Integrare API și sisteme
-                            externe</strong>
-                        <span class="text-gray-200/70 text-base">Conectăm aplicațiile tale cu servicii
-                            externe pentru o gestionare integrată.</span>
+                        <strong class="text-xl font-bold text-gray-200">{{ __("Integrare API și sisteme externe") }}</strong>
+                        <span class="text-gray-200/70 text-base">{{ __("Conectăm aplicațiile tale cu servicii externe pentru o gestionare integrată.") }}</span>
                     </div>
                 </li>
                 <li class="flex items-start mt-5">
@@ -64,9 +56,8 @@
                             d="M9 12.75 11.25 15 15 9.75M21 12a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z" />
                     </svg>
                     <div class="flex flex-col">
-                        <strong class="text-xl font-bold text-gray-200">Soluții cloud</strong>
-                        <span class="text-gray-200/70 text-base"> Oferim soluții de hosting și migrare
-                            către platforme cloud (DigitalOcean).</span>
+                        <strong class="text-xl font-bold text-gray-200">{{ __("Soluții cloud") }}</strong>
+                        <span class="text-gray-200/70 text-base"> {{ __("Oferim soluții de hosting și migrare către platforme cloud(DigitalOcean).") }}</span>
                     </div>
                 </li>
                 <li class="flex items-start mt-5">
@@ -76,9 +67,8 @@
                             d="M9 12.75 11.25 15 15 9.75M21 12a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z" />
                     </svg>
                     <div class="flex flex-col">
-                        <strong class="text-xl font-bold text-gray-200">Suport și scalabilitate</strong>
-                        <span class="text-gray-200/70 text-base"> Oferim suport continuu și soluții
-                            scalabile pe măsură ce afacerea ta crește.</span>
+                        <strong class="text-xl font-bold text-gray-200">{{ __("Suport și scalabilitate") }}</strong>
+                        <span class="text-gray-200/70 text-base"> {{ __("Oferim suport continuu și soluții scalabile pe măsură ce afacerea ta crește.") }}</span>
                     </div>
                 </li>
             </ul>

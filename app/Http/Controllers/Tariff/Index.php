@@ -19,7 +19,7 @@ class Index extends Controller
             'email' => ['required', 'email', 'max:200'],
             'phone' => ['required', 'string'],
             'message' => ['required', 'string', 'min:50', 'max:1000'],
-            'caen' => ['required', 'min:2', 'max:1000'],
+            'caen' => ['nullable', 'min:2', 'max:1000'],
             'terms_and_conditions' => ['required', 'accepted'],
             'captcha_token' => ['required', 'string']
         ], [
