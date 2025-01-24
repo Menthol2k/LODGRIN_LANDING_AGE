@@ -139,10 +139,7 @@
 
 <script>
 import AppLayout from '@/Layouts/AppLayout.vue';
-import pickBy from 'lodash/pickBy';
-import throttle from 'lodash/throttle';
 import catchErrors from '@/catchErrors';
-import debounce from 'lodash/debounce';
 import {CheckIcon, ChevronUpDownIcon} from '@heroicons/vue/20/solid'
 import {
     Combobox,
@@ -211,17 +208,6 @@ export default {
         onExpire() {
             this.form.captcha_token = '';
         },
-    },
-
-    computed: {
-        filteredPeople() {
-            if (this.params.query.length < 1) {
-                return [];
-            }
-            return this.people.filter((person) => {
-                return person.name.toLowerCase().includes(this.params.query.toLowerCase());
-            });
-        }
     },
 
 }

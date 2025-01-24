@@ -12,7 +12,7 @@
             enter-to="opacity-100 translate-y-0" leave="transition-all duration-150"
             leave-from="opacity-100 translate-y-0" leave-to="opacity-0 translate-y-full"
             class="fixed bottom-5 right-5 z-40">
-            <button type="button" @click="goBackToTop" class="bg-secondaryColor p-2 rounded-full text-white opacity-50">
+            <button type="button" @click="goBackToTop" class="bg-white p-2 rounded-2xl shadow-xl border-2 text-gray-700">
                 <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
                     stroke="currentColor" class="size-8">
                     <path stroke-linecap="round" stroke-linejoin="round" d="m4.5 15.75 7.5-7.5 7.5 7.5" />

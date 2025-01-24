@@ -16,7 +16,7 @@
 <style scoped>
 .bg-pattern {
     position: relative;
-    background-image: url('/assets/polygons.svg');
+    background-image: url('https://lodgrin.com/polygons_.svg');
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
